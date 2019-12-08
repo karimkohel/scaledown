@@ -4,30 +4,32 @@ import sys
 
 ########## FX ##########
 
-def check_and_get():
-	if len(sys.argv) < 2:
-		print(f"Usage pyramids <file to use> ")
-		sys.exit()
-	elif sys.argv[1] == "--help":
+def check():
+	if sys.argv[1] == "--help":
 		print("""
-			---------------------------------------------------------------------\n
-			pyramid is a simple program to scale down images\n
-			usage : pyramids <image to scale down> <how many times to scale down>\n
-			---------------------------------------------------------------------\n
-			there is no other options yet
-			""")
+pyramid is a simple program to scale down images
+usage : pyramids <image to scale down> <destination>
+
+there is no other options yet
+""")
 		sys.exit()
 
-def save(img):
-	pass
+	elif len(sys.argv) < 3:
+		print(f"Usage pyramids <file to use> <destination>")
+		sys.exit()
+
+def save(lower_reselution):
+	cv2
 
 ########## Main ##########
 
+check()
+
 img = cv2.imread(sys.argv[1])
 lr = cv2.pyrDown(img)
+destination = sys.argv[2]
 
-cv2.imshow("original", img)
-cv2.imshow("pydown", lr)
+
 
 ########## clean up ##########
 
