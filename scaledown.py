@@ -23,7 +23,7 @@ def check():
 		sys.exit()
 
 def save(lower_reselution, name):
-	cv2.imwrite(name, img)
+	cv2.imwrite(name, lower_reselution)
 
 ########## Main ##########
 
