@@ -52,7 +52,7 @@ def check_name():
 				name = sys.argv[index] + "." + extention
 		
 		else:
-			name = filename + "2." + extention
+			name = filename + "(scaleddown)." + extention
 		return name
 
 def get_img():
